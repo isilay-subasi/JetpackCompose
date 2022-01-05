@@ -51,13 +51,17 @@ fun MainScreen(){
 
     //Column, Row, Box
 
-    Column(modifier = Modifier.fillMaxSize().background(Color.Gray),
+    Column(modifier = Modifier
+        .fillMaxSize()
+        .background(Color.Gray),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
 
     ) {
             CustomText(name = "Hello Android")
+            Spacer(modifier = Modifier.padding(5.dp))
             CustomText(name = "Hello World")
+            Spacer(modifier = Modifier.padding(5.dp))
             CustomText(name = "Hello Kotlin")
 
 
