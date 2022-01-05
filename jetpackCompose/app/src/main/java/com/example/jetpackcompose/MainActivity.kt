@@ -6,7 +6,9 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
@@ -57,6 +59,8 @@ fun MainScreen(){
             .clickable {
                        println("Hello World clicked")
             }
+            //.width()
+            //.height(34.dp)
             ,text = "Hello Android",color = Color.Magenta,
             fontSize = 25.sp,
             fontWeight = FontWeight.Bold
