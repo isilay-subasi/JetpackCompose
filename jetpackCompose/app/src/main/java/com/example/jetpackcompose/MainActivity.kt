@@ -10,9 +10,11 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -49,16 +51,17 @@ fun MainScreen(){
 
     //Column, Row, Box
 
-    Column() {
+    Column(modifier = Modifier.fillMaxSize().background(Color.Gray),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+
+    ) {
             CustomText(name = "Hello Android")
             CustomText(name = "Hello World")
             CustomText(name = "Hello Kotlin")
 
 
     }
-
-
-
 
 }
 
@@ -72,14 +75,15 @@ fun CustomText(name : String){
         .clickable {
             println("Hello World clicked")
         }
-        //.width()
+        .width(150.dp)
         //.height(34.dp)
         //.size(width = 100.dp,height = 100.dp)
-        .fillMaxWidth() //yüzdesini , doldurabildiği kadar doldur demektir.
+        //.fillMaxWidth() //yüzdesini , doldurabildiği kadar doldur demektir.
         ,text = name,
         color = Color.Magenta,
         fontSize = 25.sp,
-        fontWeight = FontWeight.Bold
+        fontWeight = FontWeight.Bold,textAlign = TextAlign.Center
+
     )
 }
 
