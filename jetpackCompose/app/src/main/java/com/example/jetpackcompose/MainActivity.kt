@@ -50,30 +50,37 @@ fun MainScreen(){
     //Column, Row, Box
 
     Column() {
-        // Text(text = "Hello $name!",color = Color.Magenta)
-        Text(modifier = Modifier.background(color = Color.Cyan)
-            .padding(10.dp)
-            .clickable {
-                       println("Hello World clicked")
-            }
-            //.width()
-            //.height(34.dp)
-            //.size(width = 100.dp,height = 100.dp)
-            .fillMaxWidth() //yüzdesini , doldurabildiği kadar doldur demektir.
-            ,text = "Hello Android",color = Color.Magenta,
-            fontSize = 25.sp,
-            fontWeight = FontWeight.Bold
-        )
+            CustomText(name = "Hello Android")
+            CustomText(name = "Hello World")
+            CustomText(name = "Hello Kotlin")
 
-        Text(text = "Hello World",color = Color.Magenta,
-            fontSize = 25.sp,
-            fontWeight = FontWeight.Bold
-        )
+
     }
 
 
 
 
+}
+
+//Oluşturulan composable baş harfi büyük olması gerekmektedir.
+@Composable
+fun CustomText(name : String){
+    // Text(text = "Hello $name!",color = Color.Magenta)
+    Text(modifier = Modifier
+        .background(color = Color.Cyan)
+        .padding(10.dp)
+        .clickable {
+            println("Hello World clicked")
+        }
+        //.width()
+        //.height(34.dp)
+        //.size(width = 100.dp,height = 100.dp)
+        .fillMaxWidth() //yüzdesini , doldurabildiği kadar doldur demektir.
+        ,text = name,
+        color = Color.Magenta,
+        fontSize = 25.sp,
+        fontWeight = FontWeight.Bold
+    )
 }
 
 
