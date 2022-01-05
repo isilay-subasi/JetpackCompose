@@ -58,7 +58,8 @@ fun MainScreen(){
             }
             //.width()
             //.height(34.dp)
-            .size(width = 100.dp,height = 100.dp)
+            //.size(width = 100.dp,height = 100.dp)
+            .fillMaxWidth() //yüzdesini , doldurabildiği kadar doldur demektir.
             ,text = "Hello Android",color = Color.Magenta,
             fontSize = 25.sp,
             fontWeight = FontWeight.Bold
