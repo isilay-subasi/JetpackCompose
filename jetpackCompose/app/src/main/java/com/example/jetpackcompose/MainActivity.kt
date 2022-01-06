@@ -63,6 +63,16 @@ fun MainScreen(){
             CustomText(name = "Hello World")
             Spacer(modifier = Modifier.padding(5.dp))
             CustomText(name = "Hello Kotlin")
+            Spacer(modifier = Modifier.padding(5.dp))
+
+        Row() {
+            CustomText(name = "Test 1")
+            Spacer(modifier = Modifier.padding(5.dp))
+            CustomText(name = "Test 2")
+        }
+
+
+
 
 
     }
@@ -70,15 +80,16 @@ fun MainScreen(){
 }
 
 //Oluşturulan composable baş harfi büyük olması gerekmektedir.
+//Tıklanma olayını en başa koymalıyız. Sıra çok önemlidir.
 @Composable
 fun CustomText(name : String){
     // Text(text = "Hello $name!",color = Color.Magenta)
     Text(modifier = Modifier
-        .background(color = Color.Cyan)
-        .padding(10.dp)
         .clickable {
             println("Hello World clicked")
         }
+        .background(color = Color.Cyan)
+        .padding(10.dp)
         .width(150.dp)
         //.height(34.dp)
         //.size(width = 100.dp,height = 100.dp)
